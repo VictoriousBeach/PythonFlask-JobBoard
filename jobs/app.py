@@ -16,7 +16,7 @@ def open_connection():
 
 # Query database function
 def execute_sql(sql, values=(), commit=False, single=False):
-    connection = open_connection
+    connection = open_connection()
     # Query database function results
     cursor = connection.execute(sql, values)
     if commit == True:
